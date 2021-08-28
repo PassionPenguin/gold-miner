@@ -5,27 +5,27 @@
 > * 译者：[霜羽 Hoarfroster](https://github.com/PassionPenguin)
 > * 校对者：
 
-# 进度延迟是进度被拒绝
+# Apple 究竟是想拖延进度，还是选择阻拦进度？
 
 ## App Store 政策会伤害开发者吗？ 网络是一个可靠的选择吗？ 一 快看数据
 
-***更新（2021 年 6 月 16 日）：** 尝试构建移动网络游戏的人们通知我 [Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API) 在 [iOS 上的非视频元素仍然不可用](https://developer.apple.com/forums/thread/133248)。这以一种难以夸大的方式阻碍了游戏和沉浸式媒体体验。说到步履蹒跚，最初的帖子称赞 Apple 最终发布了一个可用的 IndexedDB 实现，[这似乎为时过早，这里就有一个 IndexedDB 的 Bug 了](https://www.theregister.com/2021/06/16/apple_safari_indexeddb_bug/).*
+***更新（2021 年 6 月 16 日）：** 尝试开发移动端网页游戏的开发者们告诉我，[Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API) 仍然不适用于 [iOS 上的非视频元素](https://developer.apple.com/forums/thread/133248)。这可绝对是一种怎么说也不为简单的方式，阻碍了 iOS 设备网页游戏和沉浸式媒体体验。说到 Apple 让开发者们在 iOS 上跛了脚的事情，想起来一开始这篇文章称赞了 Apple，说它最终发布了一个可用的 IndexedDB 实现 —— [似乎为时过早，马上就来了一个 IndexedDB 的 Bug 了](https://www.theregister.com/2021/06/16/apple_safari_indexeddb_bug/).*
 
 ---
 
-三个事实……
+正文之前，先说三个事实吧……
 
-1. [Apple 禁止来自 iOS 上唯一允许的 App Store 的网络应用](https://developer.apple.com/app-store/review/guidelines/#4.2).<sup>[1]</sup>
-2. [Apple 强制竞争浏览器的开发者在 iOS 上的所有浏览器上使用他们的引擎](https://developer.apple.com/app-store/review/guidelines/#2.5.6)，限制他们提供更好的网络平台版本。
-3. [Apple 声称](https://firt.dev/pwa-2021#tim-cook-promoting-pwas) [iOS 上的浏览​​器是足以支持反对 App Store 条款的开发者的平台](https://firt.dev/ios-14.5/#progressive-web-apps-on-ios-14.5) 。
+1. [Apple 禁止开发者向 iOS 上唯一的应用商店上传网页应用](https://developer.apple.com/app-store/review/guidelines/#4.2).<sup>[1]</sup>
+2. [Apple 强制要求浏览器的友商在 iOS 上的所有浏览器里面使用 Apple 的引擎](https://developer.apple.com/app-store/review/guidelines/#2.5.6)，限制他们提供更好的网络平台版本。
+3. [Apple 声称](https://firt.dev/pwa-2021#tim-cook-promoting-pwas) [iOS 上的浏览​​器是一些足以帮助那群反对 App Store 条款的开发者的平台](https://firt.dev/ios-14.5/#progressive-web-apps-on-ios-14.5) 。
 
-一次满足……不是，是和一个提议：
+和一个提议：
 
 > Apple 的 iOS 浏览器（Safari）和引擎（WebKit）的动力不足。重要功能交付的持续延迟确保网络永远不能成为其专有工具和 App Store 的可靠替代品。
 
-这是一个大胆的断言，证明它需要压倒性的证据。这篇文章挖掘了有关兼容性修复和功能添加速度的公开数据，以评估我们应该怎样向 Apple 索赔。
+这是一个大胆的断言，证明它需要压倒性的证据。这篇文章挖掘了有关兼容性修复和功能添加速度的公开数据，以评估我们应该怎样向 Apple 抗诉！
 
-### 史蒂夫和蒂姆的特写魔术
+### 史蒂夫和蒂姆的「拒绝」魔术
 
 误导通常会破坏围绕浏览器、网络角色和 iOS 上 App Store 政策的辩论。该流派的经典包括：
 
